@@ -1,0 +1,53 @@
+body {
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.particles {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+#image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1/1;
+  opacity: 0;
+}
+#image img {
+  aspect-ratio: 1/1;
+}
+#remaining {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: white;
+}
+.remainingTime {
+  transition: all 0.2s;
+}
+.animated {
+  animation: pulse 0.4s forwards;
+}
+@keyframes pulse {
+  0% {opacity: 100%;}
+  50% {opacity: 0;}
+  100% {opacity: 100%;}
+}
+.animated2 {
+  animation: rgb 5s infinite;
+}
+@keyframes rgb {
+  0% {color: red;}
+  25% {color: green;}
+  50% {color: blue;}
+  75% {color: green;}
+  100% {color: red;}
+}
