@@ -1,4 +1,9 @@
-    //#region particles
+   //#region urls
+    const params = new URLSearchParams(window.location.search);
+    const preview = params.get("preview");
+   //#endregion
+
+   //#region particles
     particlesJS.load('particles-js', 'jsons/config.json', function() {
       console.log('Config 1 cargado');
       document.getElementById("particles-js").style.display = "none"
@@ -51,6 +56,9 @@
     function updateCountdown() {
       // get the current date
       var now = new Date();
+      if (preview == "true") {
+        now = new Date(newYear);
+      };
       // get time diff
       var timeDiff = newYear - now;
 
